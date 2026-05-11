@@ -2,8 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Grupo Vap - Soluções Financeiras</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,37 +17,31 @@
       theme: {
         extend: {
           colors: {
-            vaporange: "#FF6B00",
-            vapblack: "#1A1A1A",
-          },
-        },
-      },
-    };
+            vaporange: '#FF6B00',
+            vapblack: '#1A1A1A',
+          }
+        }
+      }
+    }
   </script>
 
   <style>
     .hero-bg {
       background:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2070&q=80");
+        linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2070&q=80');
       background-size: cover;
       background-position: center;
     }
 
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow:
-        0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,.1),
+                  0 10px 10px -5px rgba(0,0,0,.04);
     }
 
     .transition-all {
-      transition: all 0.3s ease;
-    }
-
-    #map {
-      height: 400px;
-      width: 100%;
+      transition: all .3s ease;
     }
   </style>
 </head>
@@ -66,293 +59,217 @@
 
   <!-- HEADER -->
   <header class="bg-vapblack text-white sticky top-0 z-40 shadow-md">
+
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
 
       <div class="flex items-center">
         <img
           src="https://i.imgur.com/JDSks7F.png"
-          alt="Grupo Vap Logo"
+          alt="Grupo Vap"
           class="h-10 mr-2"
         />
-        <span class="text-xl font-bold">GRUPO VAP</span>
+
+        <span class="text-xl font-bold">
+          GRUPO VAP
+        </span>
       </div>
 
       <nav class="hidden md:flex space-x-8">
-        <a href="#inicio" class="hover:text-vaporange transition-all">Início</a>
-        <a href="#sobre" class="hover:text-vaporange transition-all">Sobre</a>
-        <a href="#servicos" class="hover:text-vaporange transition-all">Serviços</a>
-        <a href="#trabalhe-conosco" class="hover:text-vaporange transition-all">Trabalhe Conosco</a>
-        <a href="#contato" class="hover:text-vaporange transition-all">Contato</a>
-        <a href="#ouvidoria" class="hover:text-vaporange transition-all">Ouvidoria</a>
+
+        <a href="#inicio" class="hover:text-vaporange transition-all">
+          Início
+        </a>
+
+        <a href="#sobre" class="hover:text-vaporange transition-all">
+          Sobre
+        </a>
+
+        <a href="#servicos" class="hover:text-vaporange transition-all">
+          Serviços
+        </a>
+
+        <a href="#trabalhe-conosco" class="hover:text-vaporange transition-all">
+          Trabalhe Conosco
+        </a>
+
+        <a href="#ouvidoria" class="hover:text-vaporange transition-all">
+          Ouvidoria
+        </a>
+
+        <a href="#contato" class="hover:text-vaporange transition-all">
+          Contato
+        </a>
+
       </nav>
 
       <button
-        class="md:hidden text-white focus:outline-none"
+        class="md:hidden text-white"
         id="mobile-menu-button"
       >
         <i class="fas fa-bars text-2xl"></i>
       </button>
+
     </div>
 
-    <!-- MOBILE MENU -->
+    <!-- MENU MOBILE -->
     <div
       class="md:hidden hidden bg-vapblack w-full py-2 px-4"
       id="mobile-menu"
     >
-      <a href="#inicio" class="block py-2 hover:text-vaporange">Início</a>
-      <a href="#sobre" class="block py-2 hover:text-vaporange">Sobre</a>
-      <a href="#servicos" class="block py-2 hover:text-vaporange">Serviços</a>
-      <a href="#trabalhe-conosco" class="block py-2 hover:text-vaporange">Trabalhe Conosco</a>
-      <a href="#contato" class="block py-2 hover:text-vaporange">Contato</a>
-      <a href="#ouvidoria" class="block py-2 hover:text-vaporange">Ouvidoria</a>
+
+      <a href="#inicio" class="block py-2 hover:text-vaporange">
+        Início
+      </a>
+
+      <a href="#sobre" class="block py-2 hover:text-vaporange">
+        Sobre
+      </a>
+
+      <a href="#servicos" class="block py-2 hover:text-vaporange">
+        Serviços
+      </a>
+
+      <a href="#trabalhe-conosco" class="block py-2 hover:text-vaporange">
+        Trabalhe Conosco
+      </a>
+
+      <a href="#ouvidoria" class="block py-2 hover:text-vaporange">
+        Ouvidoria
+      </a>
+
+      <a href="#contato" class="block py-2 hover:text-vaporange">
+        Contato
+      </a>
+
     </div>
+
   </header>
 
   <!-- HERO -->
   <section
     id="inicio"
-    class="hero-bg text-white py-20 md:py-32 flex items-center"
+    class="hero-bg text-white py-24 text-center"
   >
-    <div class="container mx-auto px-4 text-center">
+
+    <div class="container mx-auto px-4">
+
       <h1 class="text-4xl md:text-6xl font-bold mb-6">
         Conectamos pessoas às melhores soluções financeiras
       </h1>
 
-      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-        14 anos transformando vidas com atendimento humanizado e soluções financeiras para todos
+      <p class="text-xl max-w-3xl mx-auto mb-8">
+        14 anos transformando vidas com atendimento humanizado.
       </p>
 
       <a
         href="#trabalhe-conosco"
-        class="bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all inline-block"
+        class="bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition-all"
       >
         Trabalhe Conosco
       </a>
+
     </div>
-  </section>
 
-  <!-- SERVIÇOS -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-
-      <h2 class="text-3xl font-bold text-center mb-12">
-        Nossas Soluções Financeiras
-      </h2>
-
-      <div class="grid md:grid-cols-3 gap-8">
-
-        <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all">
-          <div class="text-vaporange text-4xl mb-4">
-            <i class="fas fa-hand-holding-usd"></i>
-          </div>
-
-          <h3 class="text-xl font-bold mb-3">Empréstimos</h3>
-
-          <p class="text-gray-600">
-            Soluções personalizadas de crédito com condições que se adaptam às suas necessidades financeiras.
-          </p>
-        </div>
-
-        <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all">
-          <div class="text-vaporange text-4xl mb-4">
-            <i class="fas fa-credit-card"></i>
-          </div>
-
-          <h3 class="text-xl font-bold mb-3">Cartões</h3>
-
-          <p class="text-gray-600">
-            Opções flexíveis de cartões que se adaptam ao seu estilo de vida e necessidades financeiras.
-          </p>
-        </div>
-
-        <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all">
-          <div class="text-vaporange text-4xl mb-4">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-
-          <h3 class="text-xl font-bold mb-3">Seguros</h3>
-
-          <p class="text-gray-600">
-            Proteção completa com coberturas personalizadas.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre" class="py-16">
-    <div class="container mx-auto px-4">
-
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold">Sobre o Grupo Vap</h2>
-
-        <div class="w-20 h-1 bg-vaporange mx-auto mt-4"></div>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-
-        <div>
-          <h3 class="text-2xl font-bold mb-4 text-vapblack">
-            14 Anos Transformando Vidas
-          </h3>
-
-          <p class="text-gray-600 mb-4">
-            O Grupo Vap possui 14 anos de experiência no mercado e transforma vidas por meio de soluções financeiras que vão além do crédito.
-          </p>
-
-          <p class="text-gray-600">
-            Cada cliente é tratado de forma única. Nossa cultura é inclusiva, ética e voltada para a responsabilidade socioambiental.
-          </p>
-        </div>
-
-        <div class="rounded-lg overflow-hidden shadow-lg">
-          <img
-            src="https://i.imgur.com/epnO7R6.jpeg"
-            alt="Equipe Grupo Vap"
-            class="w-full h-auto"
-          />
-        </div>
-
-      </div>
-    </div>
   </section>
 
   <!-- OUVIDORIA -->
-  <section id="ouvidoria" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4">
+  <section
+    id="ouvidoria"
+    class="py-16 bg-gray-100"
+  >
 
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold">Ouvidoria</h2>
-        <div class="w-20 h-1 bg-vaporange mx-auto mt-4"></div>
-      </div>
+    <div class="container mx-auto px-4 max-w-3xl text-center">
 
-      <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-3xl font-bold mb-4">
+        Ouvidoria
+      </h2>
 
-        <p class="text-gray-600 mb-6 text-center">
-          Nosso canal de ouvidoria está disponível para sugestões, reclamações, elogios e solicitações.
+      <div class="w-20 h-1 bg-vaporange mx-auto mb-8"></div>
+
+      <p class="text-gray-600 mb-8">
+        Canal exclusivo para sugestões, reclamações,
+        elogios e denúncias.
+      </p>
+
+      <div class="bg-white rounded-lg shadow-lg p-8">
+
+        <p class="mb-4">
+          <strong>E-mail:</strong><br>
+          ouvidoria@vapgroup.com.br
         </p>
 
-        <form
-          action="https://formspree.io/f/meokbker"
-          method="POST"
-          class="space-y-6"
-        >
+        <p class="mb-4">
+          <strong>Telefone:</strong><br>
+          (31) 9543-3352
+        </p>
 
-          <div>
-            <label class="block mb-2 font-medium">Nome</label>
+        <p>
+          Atendimento de segunda a sexta,
+          das 8h às 18h.
+        </p>
 
-            <input
-              type="text"
-              name="nome"
-              required
-              class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vaporange"
-            />
-          </div>
-
-          <div>
-            <label class="block mb-2 font-medium">E-mail</label>
-
-            <input
-              type="email"
-              name="email"
-              required
-              class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vaporange"
-            />
-          </div>
-
-          <div>
-            <label class="block mb-2 font-medium">Mensagem</label>
-
-            <textarea
-              name="mensagem"
-              rows="5"
-              required
-              class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vaporange"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition-all w-full"
-          >
-            Enviar para Ouvidoria
-          </button>
-
-        </form>
       </div>
+
     </div>
+
+  </section>
+
+  <!-- CONTATO -->
+  <section
+    id="contato"
+    class="py-16"
+  >
+
+    <div class="container mx-auto px-4 text-center">
+
+      <h2 class="text-3xl font-bold mb-4">
+        Contato
+      </h2>
+
+      <div class="w-20 h-1 bg-vaporange mx-auto mb-8"></div>
+
+      <p class="mb-2">
+        Rua Espírito Santos, 466 - Centro
+      </p>
+
+      <p class="mb-2">
+        Belo Horizonte / MG
+      </p>
+
+      <p class="mb-2">
+        recrutamento@vapgroup.com.br
+      </p>
+
+      <p>
+        (31) 9543-3352
+      </p>
+
+    </div>
+
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-vapblack text-white py-12">
-    <div class="container mx-auto px-4">
+  <footer class="bg-vapblack text-white py-8 text-center">
 
-      <div class="grid md:grid-cols-4 gap-8">
+    <p>
+      © 2026 Grupo Vap - Todos os direitos reservados
+    </p>
 
-        <div>
-          <div class="flex items-center mb-4">
-            <img
-              src="https://i.imgur.com/JDSks7F.png"
-              alt="Grupo Vap Logo"
-              class="h-8 mr-2"
-            />
-
-            <span class="text-lg font-bold">GRUPO VAP</span>
-          </div>
-
-          <p class="text-gray-400">
-            14 anos transformando vidas com soluções financeiras inovadoras e atendimento humanizado.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
-
-          <ul class="space-y-2">
-            <li><a href="#inicio" class="text-gray-400 hover:text-vaporange">Início</a></li>
-            <li><a href="#sobre" class="text-gray-400 hover:text-vaporange">Sobre</a></li>
-            <li><a href="#servicos" class="text-gray-400 hover:text-vaporange">Serviços</a></li>
-            <li><a href="#trabalhe-conosco" class="text-gray-400 hover:text-vaporange">Trabalhe Conosco</a></li>
-            <li><a href="#contato" class="text-gray-400 hover:text-vaporange">Contato</a></li>
-            <li><a href="#ouvidoria" class="text-gray-400 hover:text-vaporange">Ouvidoria</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-        <p>&copy; 2026 Grupo Vap - Todos os direitos reservados</p>
-      </div>
-
-    </div>
   </footer>
 
   <!-- SCRIPT -->
   <script>
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
 
-    mobileMenuButton.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+    const mobileMenuButton =
+      document.getElementById('mobile-menu-button');
+
+    const mobileMenu =
+      document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
-          mobileMenu.classList.add("hidden");
-        }
-
-        document
-          .querySelector(this.getAttribute("href"))
-          .scrollIntoView({
-            behavior: "smooth",
-          });
-      });
-    });
   </script>
 
 </body>
