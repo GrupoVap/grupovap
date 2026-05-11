@@ -1,144 +1,345 @@
-# Código completo atualizado com Ouvidoria
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-Substitua TODO o conteúdo do seu `index.html` por este código:
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Vap - Soluções Financeiras</title>
 
-```html
-<!-- MENU DESKTOP -->
-<nav class="hidden md:flex space-x-8">
-    <a href="#inicio" class="hover:text-vaporange transition-all">Início</a>
-    <a href="#sobre" class="hover:text-vaporange transition-all">Sobre</a>
-    <a href="#servicos" class="hover:text-vaporange transition-all">Serviços</a>
-    <a href="#trabalhe-conosco" class="hover:text-vaporange transition-all">Trabalhe Conosco</a>
-    <a href="#ouvidoria" class="hover:text-vaporange transition-all">Ouvidoria</a>
-    <a href="#contato" class="hover:text-vaporange transition-all">Contato</a>
-</nav>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- MENU MOBILE -->
-<div class="md:hidden hidden bg-vapblack w-full py-2 px-4" id="mobile-menu">
-    <a href="#inicio" class="block py-2 hover:text-vaporange">Início</a>
-    <a href="#sobre" class="block py-2 hover:text-vaporange">Sobre</a>
-    <a href="#servicos" class="block py-2 hover:text-vaporange">Serviços</a>
-    <a href="#trabalhe-conosco" class="block py-2 hover:text-vaporange">Trabalhe Conosco</a>
-    <a href="#ouvidoria" class="block py-2 hover:text-vaporange">Ouvidoria</a>
-    <a href="#contato" class="block py-2 hover:text-vaporange">Contato</a>
-</div>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- COLE ESTA SEÇÃO ABAIXO DA SEÇÃO TRABALHE CONOSCO -->
-<section id="ouvidoria" class="py-16 bg-gray-50">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vaporange: '#FF6B00',
+                        vapblack: '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
 
-    <div class="container mx-auto px-4">
+    <style>
+        .hero-bg {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=2070&q=80');
 
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold">Ouvidoria</h2>
-            <div class="w-20 h-1 bg-vaporange mx-auto mt-4"></div>
-            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-                Este canal é destinado para sugestões, elogios, reclamações e denúncias.
-                Sua manifestação será analisada com responsabilidade e confidencialidade.
-            </p>
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-white text-gray-800">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/553195433352"
+        target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition-all z-50">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </a>
+
+    <!-- HEADER -->
+    <header class="bg-vapblack text-white sticky top-0 z-40 shadow-md">
+
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+
+            <div class="flex items-center">
+
+                <img src="https://i.imgur.com/JDSks7F.png"
+                    alt="Grupo Vap Logo"
+                    class="h-10 mr-2">
+
+                <span class="text-xl font-bold">
+                    GRUPO VAP
+                </span>
+
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+
+                <a href="#inicio"
+                    class="hover:text-vaporange transition-all">
+                    Início
+                </a>
+
+                <a href="#sobre"
+                    class="hover:text-vaporange transition-all">
+                    Sobre
+                </a>
+
+                <a href="#servicos"
+                    class="hover:text-vaporange transition-all">
+                    Serviços
+                </a>
+
+                <a href="#trabalhe-conosco"
+                    class="hover:text-vaporange transition-all">
+                    Trabalhe Conosco
+                </a>
+
+                <a href="#ouvidoria"
+                    class="hover:text-vaporange transition-all">
+                    Ouvidoria
+                </a>
+
+                <a href="#contato"
+                    class="hover:text-vaporange transition-all">
+                    Contato
+                </a>
+
+            </nav>
+
+            <button class="md:hidden text-white focus:outline-none"
+                id="mobile-menu-button">
+
+                <i class="fas fa-bars text-2xl"></i>
+
+            </button>
+
         </div>
 
-        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <!-- MENU MOBILE -->
+        <div class="md:hidden hidden bg-vapblack w-full py-2 px-4"
+            id="mobile-menu">
 
-            <form id="ouvidoria-form"
-                action="https://formspree.io/f/meokbker"
-                method="POST"
-                class="space-y-6">
+            <a href="#inicio"
+                class="block py-2 hover:text-vaporange">
+                Início
+            </a>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">
-                        Nome
-                    </label>
+            <a href="#sobre"
+                class="block py-2 hover:text-vaporange">
+                Sobre
+            </a>
 
-                    <input
-                        type="text"
-                        name="nome"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
-                </div>
+            <a href="#servicos"
+                class="block py-2 hover:text-vaporange">
+                Serviços
+            </a>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">
-                        E-mail
-                    </label>
+            <a href="#trabalhe-conosco"
+                class="block py-2 hover:text-vaporange">
+                Trabalhe Conosco
+            </a>
 
-                    <input
-                        type="email"
-                        name="email"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
-                </div>
+            <a href="#ouvidoria"
+                class="block py-2 hover:text-vaporange">
+                Ouvidoria
+            </a>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">
-                        Tipo de Manifestação*
-                    </label>
+            <a href="#contato"
+                class="block py-2 hover:text-vaporange">
+                Contato
+            </a>
 
-                    <select
-                        name="tipo"
-                        required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+        </div>
 
-                        <option value="">Selecione</option>
-                        <option value="Reclamação">Reclamação</option>
-                        <option value="Sugestão">Sugestão</option>
-                        <option value="Elogio">Elogio</option>
-                        <option value="Denúncia">Denúncia</option>
+    </header>
 
-                    </select>
-                </div>
+    <!-- HERO -->
+    <section id="inicio"
+        class="hero-bg text-white py-20 md:py-32 flex items-center">
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">
-                        Mensagem*
-                    </label>
+        <div class="container mx-auto px-4 text-center">
 
-                    <textarea
-                        name="mensagem"
-                        rows="5"
-                        required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange"
-                        placeholder="Descreva sua manifestação"></textarea>
-                </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Conectamos pessoas às melhores soluções financeiras
+            </h1>
 
-                <div class="flex items-start">
-                    <input
-                        type="checkbox"
-                        required
-                        class="mt-1 mr-2">
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                14 anos transformando vidas com atendimento humanizado
+                e soluções financeiras para todos
+            </p>
 
-                    <p class="text-sm text-gray-600">
-                        Declaro que as informações fornecidas são verdadeiras.
-                    </p>
-                </div>
+            <a href="#trabalhe-conosco"
+                class="bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all inline-block">
 
-                <div>
-                    <button
-                        type="submit"
+                Trabalhe Conosco
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- OUVIDORIA -->
+    <section id="ouvidoria"
+        class="py-16 bg-gray-50">
+
+        <div class="container mx-auto px-4">
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-3xl font-bold">
+                    Ouvidoria
+                </h2>
+
+                <div class="w-20 h-1 bg-vaporange mx-auto mt-4"></div>
+
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+
+                    Este canal é destinado para sugestões,
+                    elogios, reclamações e denúncias.
+
+                    Sua manifestação será analisada
+                    com responsabilidade e confidencialidade.
+
+                </p>
+
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+
+                <form action="https://formspree.io/f/meokbker"
+                    method="POST"
+                    class="space-y-6">
+
+                    <div>
+
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Nome
+                        </label>
+
+                        <input type="text"
+                            name="nome"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+                    </div>
+
+                    <div>
+
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            E-mail
+                        </label>
+
+                        <input type="email"
+                            name="email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+                    </div>
+
+                    <div>
+
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Tipo de Manifestação
+                        </label>
+
+                        <select name="tipo"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md">
+
+                            <option>Reclamação</option>
+                            <option>Sugestão</option>
+                            <option>Elogio</option>
+                            <option>Denúncia</option>
+
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Mensagem
+                        </label>
+
+                        <textarea name="mensagem"
+                            rows="5"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
+
+                    </div>
+
+                    <button type="submit"
                         class="w-full bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition-all">
 
                         Enviar Manifestação
 
                     </button>
-                </div>
 
-            </form>
+                </form>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- CONTATO -->
+    <section id="contato"
+        class="py-16">
 
-<!-- LINKS RÁPIDOS DO FOOTER -->
-<li><a href="#inicio" class="text-gray-400 hover:text-vaporange transition-all">Início</a></li>
-<li><a href="#sobre" class="text-gray-400 hover:text-vaporange transition-all">Sobre</a></li>
-<li><a href="#servicos" class="text-gray-400 hover:text-vaporange transition-all">Serviços</a></li>
-<li><a href="#trabalhe-conosco" class="text-gray-400 hover:text-vaporange transition-all">Trabalhe Conosco</a></li>
-<li><a href="#ouvidoria" class="text-gray-400 hover:text-vaporange transition-all">Ouvidoria</a></li>
-<li><a href="#contato" class="text-gray-400 hover:text-vaporange transition-all">Contato</a></li>
-```
+        <div class="container mx-auto px-4">
 
-Depois:
+            <div class="text-center mb-12">
 
-1. Salve o arquivo
-2. Clique em “Commit changes”
-3. Aguarde 1 minuto
-4. Atualize seu site no GitHub Pages
+                <h2 class="text-3xl font-bold">
+                    Contato
+                </h2>
+
+                <div class="w-20 h-1 bg-vaporange mx-auto mt-4"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-vapblack text-white py-12">
+
+        <div class="container mx-auto px-4 text-center">
+
+            <p>
+                &copy; 2025 Grupo Vap - Todos os direitos reservados
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+
+        const mobileMenuButton =
+            document.getElementById('mobile-menu-button');
+
+        const mobileMenu =
+            document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+
+            mobileMenu.classList.toggle('hidden');
+
+        });
+
+    </script>
+
+</body>
+
+</html>
