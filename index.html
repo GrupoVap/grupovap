@@ -1,65 +1,240 @@
-</head>
-<body class="font-sans bg-white text-gray-800">
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5531995433352" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition-all z-50">
-    <a href="https://wa.me/553195433352" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition-all z-50">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <section id="inicio" class="hero-bg text-white py-20 md:py-32 flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Conectamos pessoas às melhores soluções financeiras</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">20 anos transformando vidas com atendimento humanizado e soluções financeiras para todos</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">14 anos transformando vidas com atendimento humanizado e soluções financeiras para todos</p>
+            <a href="#trabalhe-conosco" class="bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all inline-block">Trabalhe Conosco</a>
+        </div>
+    </section>
+@@ -124,8 +124,8 @@ <h2 class="text-3xl font-bold">Sobre o Grupo Vap</h2>
 
-@@ -316,8 +316,9 @@
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-vapblack">20 Anos Transformando Vidas</h3>
+                    <p class="text-gray-600 mb-4">O Grupo Vap possui 20 anos de experiência no mercado e transforma vidas por meio de soluções financeiras que vão além do crédito. Atuamos com foco em segurança e bem-estar, oferecendo atendimento de excelência para todos os clientes.</p>
+                    <h3 class="text-2xl font-bold mb-4 text-vapblack">14 Anos Transformando Vidas</h3>
+                    <p class="text-gray-600 mb-4">O Grupo Vap possui 14 anos de experiência no mercado e transforma vidas por meio de soluções financeiras que vão além do crédito. Atuamos com foco em segurança e bem-estar, oferecendo atendimento de excelência para todos os clientes.</p>
+                    <p class="text-gray-600">Cada cliente é tratado de forma única. Nossa cultura é inclusiva, ética e voltada para a responsabilidade socioambiental.</p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+@@ -229,7 +229,7 @@ <h2 class="text-3xl font-bold">Trabalhe Conosco</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Faça parte do nosso time!</h3>
+                    <p class="mb-6">No Grupo Vap, valorizamos pessoas comprometidas, éticas e que buscam crescimento profissional. Oferecemos ambiente dinâmico, oportunidades reais de desenvolvimento e benefícios competitivos.</p>
+                    <p class="mb-6">No Grupo Vap, valorizamos pessoas comprometidas, éticas e que buscam crescimento profissional. Oferecemos ambiente dinâmico, oportunidades reais de desenvolvimento ve benefícios competitivos.</p>
+                    <p class="mb-6">Se você tem experiência em atendimento ao cliente, vendas ou deseja ingressar no mercado financeiro, envie seu currículo e venha fazer parte dessa equipe vencedora!</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-vaporange text-white p-3 rounded-full">
+@@ -252,4 +252,296 @@ <h3 class="text-2xl font-bold mb-4">Faça parte do nosso time!</h3>
+                </div>
+
+                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                    <form id="job-form" action="https://formspree.io/f/meokbker" method="POST" class="space-y-4">
+                    <form id="job-form" action="https://formspree.io/f/meokbker" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo*</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail*</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone*</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange" placeholder="(xx) xxxxx-xxxx">
+                        </div>
+                        <div>
+                            <label for="cpf" class="block text-sm font-medium text-gray-700 mb-1">CPF*</label>
+                            <input type="text" id="cpf" name="cpf" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange" placeholder="000.000.000-00">
+                        </div>
+                        <div>
+                            <label for="position" class="block text-sm font-medium text-gray-700 mb-1">Área de Interesse*</label>
+                            <select id="position" name="position" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                                <option value="">Selecione uma opção</option>
+                                <option value="Atendimento">Atendimento ao Cliente</option>
+                                <option value="Vendas">Vendas</option>
+                                <option value="Backoffice">Backoffice</option>
+                                <option value="Analista">Analista Financeiro</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="experience" class="block text-sm font-medium text-gray-700 mb-1">Experiência*</label>
+                            <textarea id="experience" name="experience" rows="3" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange" placeholder="Descreva brevemente sua experiência profissional"></textarea>
+                        </div>
+                        <div>
+                            <label for="resume" class="block text-sm font-medium text-gray-700 mb-1">Currículo (Anexar PDF)*</label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                        </div>
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition-all">
+                                Enviar Candidatura
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Contato</h2>
+                <div class="w-20 h-1 bg-vaporange mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Entre em contato conosco</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-vaporange text-white p-3 rounded-full mr-4">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Endereço</h4>
                                 <p>Rua Funchal, 538 - Vila Olímpia<br>São Paulo/SP - CEP 04551-060</p>
-                                <h4 class="font-bold">Endereços</h4>
-                                <p>Rua Espírito Santos, 466, Centro - Belo Horizonte/MG</p>
-                                <p class="mt-2">Av. Sinfrônio Brochado, 624 - Barreiro, Belo Horizonte/MG</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-@@ -326,7 +327,7 @@
+                            <div class="bg-vaporange text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Telefone</h4>
                                 <p>+55 11 4346-6600</p>
-                                <p>(31) 9543-3352</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-@@ -335,7 +336,7 @@
+                            <div class="bg-vaporange text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">E-mail</h4>
                                 <p>contato@grupovap.com.br</p>
-                                <p>recrutamento@vapgroup.com.br</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-@@ -344,7 +345,7 @@
+                            <div class="bg-vaporange text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Horário de Funcionamento</h4>
                                 <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
-                                <p>Segunda a Sexta: 8h às 20h30</p>
                             </div>
                         </div>
                     </div>
-@@ -449,99 +450,100 @@
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Siga-nos nas redes sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-vaporange hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-vaporange hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-vaporange hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-vaporange hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <form id="contact-form" action="https://formspree.io/f/meokbker" method="POST" class="space-y-6">
+                        <div>
+                            <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Nome*</label>
+                            <input type="text" id="contact-name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                        </div>
+                        <div>
+                            <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">E-mail*</label>
+                            <input type="email" id="contact-email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                        </div>
+                        <div>
+                            <label for="contact-phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                            <input type="tel" id="contact-phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                        </div>
+                        <div>
+                            <label for="contact-cpf" class="block text-sm font-medium text-gray-700 mb-1">CPF*</label>
+                            <input type="text" id="contact-cpf" name="cpf" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange" placeholder="000.000.000-00">
+                        </div>
+                        <div>
+                            <label for="contact-subject" class="block text-sm font-medium text-gray-700 mb-1">Assunto*</label>
+                            <select id="contact-subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange">
+                                <option value="">Selecione um assunto</option>
+                                <option value="Empréstimos">Empréstimos</option>
+                                <option value="Cartões">Cartões</option>
+                                <option value="Seguros">Seguros</option>
+                                <option value="Trabalhe Conosco">Trabalhe Conosco</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem*</label>
+                            <textarea id="contact-message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-vaporange"></textarea>
+                        </div>
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-vaporange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-md transition-all">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mt-16 rounded-lg overflow-hidden shadow-lg">
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.334593823503!2d-46.68927772401497!3d-23.59806197878001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57460f80e7e7%3A0x9a1a9b9a9a9b9a9b!2sR.%20Funchal%2C%20538%20-%20Vila%20Ol%C3%ADmpia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004551-060!5e0!3m2!1spt-BR!2sbr!4v1621010412356!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-vapblack text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.imgur.com/JDSks7F.png" alt="Grupo Vap Logo" class="h-8 mr-2">
+                        <span class="text-lg font-bold">GRUPO VAP</span>
+                    </div>
+                    <p class="text-gray-400">14 anos transformando vidas com soluções financeiras inovadoras e atendimento humanizado.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-vaporange transition-all">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-vaporange transition-all">Sobre</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-vaporange transition-all">Serviços</a></li>
+                        <li><a href="#trabalhe-conosco" class="text-gray-400 hover:text-vaporange transition-all">Trabalhe Conosco</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-vaporange transition-all">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-vaporange transition-all">Empréstimos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-vaporange transition-all">Cartões</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-vaporange transition-all">Seguros</a></li>
+                    </ul>
+                </div>
                 <div>
                     <h4 class="text-lg font-bold mb-4">Contato</h4>
                     <address class="not-italic space-y-2 text-gray-400">
                         <p>Rua Funchal, 538 - Vila Olímpia<br>São Paulo/SP - CEP 04551-060</p>
                         <p>+55 11 4346-6600</p>
                         <p>contato@grupovap.com.br</p>
-                        <p>Rua Espírito Santos, 466, Centro - BH</p>
-                        <p>Av. Sinfrônio Brochado, 624 - Barreiro</p>
-                        <p>(31) 9543-3352</p>
-                        <p>recrutamento@vapgroup.com.br</p>
                     </address>
                 </div>
             </div>
-
+            
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
                 <p>&copy; 2023 Grupo Vap - Todos os direitos reservados</p>
                 <div class="flex justify-center space-x-6 mt-4">
@@ -85,41 +260,41 @@
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
+        
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
+                
                 // Close mobile menu when a link is clicked
                 if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
-
+                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-
+        
         // Form submission handling
         const forms = document.querySelectorAll('form');
-
+        
         forms.forEach(form => {
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
-
+                
                 const formData = new FormData(this);
                 const submitButton = this.querySelector('button[type="submit"]');
                 const originalButtonText = submitButton.textContent;
-
+                
                 submitButton.disabled = true;
                 submitButton.textContent = 'Enviando...';
-
+                
                 fetch(this.action, {
                     method: 'POST',
                     body: formData,
